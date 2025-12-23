@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Roboto", "sans-serif";
+  --color-primary: #1368ec;
+  --color-dis-primary: #92b9f6;
+  --color-success: #2ecc71;
+}
+
+@layer base {
+  html {
+     font-family: var(--font-display);
+  }
+
+  body {
+    background-color: #fcfbfc;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+ }
+}
+
+.input-box {
+  @apply w-full flex justify-between gap-3 text-sm text-black bg-white rounded px-4 py-3 my-2 border border-slate-200 outline-none;
+  
+}
+
+.form-input {
+  @apply w-full text-sm text-black outline-none bg-white border border-slate-100 px-2.5 py-3 rounded-md mt-2 placeholder:text-gray-500
+}
+
+.amount-input-box {
+  @apply w-full flex gap-1 text-sm text-black bg-white rounded px-1 py-1 my-2 outline-none;  
+}
+
+.amount-input-box button {
+  @apply rounded px-2 py-1 border border-slate-200 outline-none
+}
+
+.amount-input-box input {
+  @apply rounded border border-slate-200 outline-none
+} 
+
+.btn-primary {
+  @apply w-full text-sm font-medium text-white bg-primary shadow-lg shadow-purple-600/5 p-[10px] rounded-md my-1 hover:bg-blue-600/15 hover:text-blue-600 disabled:bg-dis-primary cursor-pointer;
+}
+
+.user-card {
+  @apply bg-white p-4 rounded-md shadow-md shadow-gray-100 border border-gray-200/50;
+}
+
+.card-btn {
+  @apply flex items-center gap-3 text-[12px] font-medium text-gray-700 hover:text-primary bg-gray-50 hover:bg-blue-50 px-4 py-1.5 rounded-lg border border-gray-200/50 cursor-pointer; 
+}
+
+.card-btn-fill {
+  @apply flex items-center gap-3 text-[12px] font-medium text-white hover:text-primary bg-primary hover:bg-blue-50 px-4 py-1.5 rounded-lg border border-primary cursor-pointer; 
+}
+
+.card-btn-unpaid {
+  @apply flex items-center gap-3 text-[12px] font-medium text-white hover:text-[#ffc107] bg-[#ffc107] hover:bg-yellow-50 px-4 py-1.5 rounded-lg border border-[#ffc107] cursor-pointer; 
+}
+
+.title {
+  @apply text-xl font-semibold text-black capitalize
+}
